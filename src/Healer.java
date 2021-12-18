@@ -1,7 +1,8 @@
+import java.rmi.RemoteException;
+
 public class Healer extends Player
 {
-    public Healer(String name)
-    {
+    public Healer(String name) throws RemoteException {
         super(name);
         this.health = 80;
         weapon = new Weapon("Wand", 5);
@@ -11,4 +12,6 @@ public class Healer extends Player
     public String getClassName() {
         return "Healer";
     }
+
+
 }

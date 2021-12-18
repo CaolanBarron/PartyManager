@@ -1,7 +1,8 @@
+import java.rmi.RemoteException;
+
 public class PlayerFactory
 {
-    public static Player playerFactory(int i, String namePicker)
-    {
+    public static Player playerFactory(int i, String namePicker) throws RemoteException {
         return switch (i)
         {
             case 0 -> new Fighter(namePicker);

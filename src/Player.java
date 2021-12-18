@@ -1,4 +1,8 @@
 import java.io.Serializable;
+import java.lang.reflect.AccessibleObject;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
 public abstract class Player implements Serializable
 {
@@ -6,7 +10,7 @@ public abstract class Player implements Serializable
     int health;
     Weapon weapon;
 
-    public Player(String name)
+    public Player(String name) throws RemoteException
     {
         this.name = name;
     }
